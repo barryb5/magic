@@ -1,0 +1,1411 @@
+[
+  {
+    "count": 1,
+    "card": {
+      "name": "Arcane Denial",
+      "id": "9b3f47a9-65fb-4b53-8e52-1c4b678b5841",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "oracle_text": "Counter target spell. Its controller may draw up to two cards at the beginning of the next turn's upkeep.\nYou draw a card at the beginning of the next turn's upkeep.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Arcane Signet",
+      "id": "3d994115-378d-4685-a5dc-e448831da434",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Arwen, Weaver of Hope",
+      "id": "4d4f4d41-232d-4377-be69-de590b880edb",
+      "mana_cost": "{1}{G}{G}",
+      "type_line": "Legendary Creature — Elf Noble",
+      "oracle_text": "Each other creature you control enters with a number of additional +1/+1 counters on it equal to Arwen's toughness.",
+      "power": 2,
+      "toughness": 1,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Beast Within",
+      "id": "ccac70d4-6e04-4802-8bb8-021368a40e14",
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "oracle_text": "Destroy target permanent. Its controller creates a 3/3 green Beast creature token.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "3b584d93-5681-4ecd-953c-5ef58307caab",
+          "component": "token",
+          "name": "Beast",
+          "type_line": "Token Creature — Beast",
+          "uri": "https://api.scryfall.com/cards/3b584d93-5681-4ecd-953c-5ef58307caab"
+        },
+        {
+          "object": "related_card",
+          "id": "ccac70d4-6e04-4802-8bb8-021368a40e14",
+          "component": "combo_piece",
+          "name": "Beast Within",
+          "type_line": "Instant",
+          "uri": "https://api.scryfall.com/cards/ccac70d4-6e04-4802-8bb8-021368a40e14"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Bred for the Hunt",
+      "id": "d11dffef-98c8-400d-98a2-d4fa506f18c7",
+      "mana_cost": "{1}{G}{U}",
+      "type_line": "Enchantment",
+      "oracle_text": "Whenever a creature you control with a +1/+1 counter on it deals combat damage to a player, you may draw a card.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Champion of Lambholt",
+      "id": "46eff31d-f460-48f2-aab7-8b9b89cd87fe",
+      "mana_cost": "{1}{G}{G}",
+      "type_line": "Creature — Human Warrior",
+      "oracle_text": "Creatures with power less than this creature's power can't block creatures you control.\nWhenever another creature you control enters, put a +1/+1 counter on this creature.",
+      "power": 1,
+      "toughness": 1,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Chasm Skulker",
+      "id": "794e01e7-430c-43cf-ba2b-1028cd088148",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Squid Horror",
+      "oracle_text": "Whenever you draw a card, put a +1/+1 counter on this creature.\nWhen this creature dies, create X 1/1 blue Squid creature tokens with islandwalk, where X is the number of +1/+1 counters on this creature. (They can't be blocked as long as defending player controls an Island.)",
+      "power": 1,
+      "toughness": 1,
+      "kewords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "794e01e7-430c-43cf-ba2b-1028cd088148",
+          "component": "combo_piece",
+          "name": "Chasm Skulker",
+          "type_line": "Creature — Squid Horror",
+          "uri": "https://api.scryfall.com/cards/794e01e7-430c-43cf-ba2b-1028cd088148"
+        },
+        {
+          "object": "related_card",
+          "id": "44ea459b-b655-4106-9f24-9bdb440e04b1",
+          "component": "token",
+          "name": "Squid",
+          "type_line": "Token Creature — Squid",
+          "uri": "https://api.scryfall.com/cards/44ea459b-b655-4106-9f24-9bdb440e04b1"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Command Tower",
+      "id": "85eb4b03-305b-45a4-82e5-5fcd586cc744",
+      "mana_cost": "",
+      "type_line": "Land",
+      "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "85eb4b03-305b-45a4-82e5-5fcd586cc744",
+          "component": "combo_piece",
+          "name": "Command Tower",
+          "type_line": "Land",
+          "uri": "https://api.scryfall.com/cards/85eb4b03-305b-45a4-82e5-5fcd586cc744"
+        },
+        {
+          "object": "related_card",
+          "id": "ad03209f-568a-40f5-8470-a083080e6831",
+          "component": "combo_piece",
+          "name": "Tower Winder",
+          "type_line": "Creature — Snake",
+          "uri": "https://api.scryfall.com/cards/ad03209f-568a-40f5-8470-a083080e6831"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Counterspell",
+      "id": "4f616706-ec97-4923-bb1e-11a69fbaa1f8",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "oracle_text": "Counter target spell.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Cyclonic Rift",
+      "id": "dfb7c4b9-f2f4-4d4e-baf2-86551c8150fe",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "oracle_text": "Return target nonland permanent you don't control to its owner's hand.\nOverload {6}{U} (You may cast this spell for its overload cost. If you do, change \"target\" in its text to \"each.\")",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Overload"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Delighted Halfling",
+      "id": "71384418-173a-4f77-adab-56e52fa23692",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Halfling Citizen",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add one mana of any color. Spend this mana only to cast a legendary spell, and that spell can't be countered.",
+      "power": 1,
+      "toughness": 2,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Dryad Arbor",
+      "id": "e3ddbebf-72cd-4d1b-ba0d-d94934654ab7",
+      "mana_cost": "",
+      "type_line": "Land Creature — Forest Dryad",
+      "oracle_text": "(This land isn't a spell, it's affected by summoning sickness, and it has \"{T}: Add {G}.\")",
+      "power": 1,
+      "toughness": 1,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Duskshell Crawler",
+      "id": "eb39a0c0-668f-4881-957a-3d09c50beaf4",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Insect",
+      "oracle_text": "When this creature enters, put a +1/+1 counter on target creature.\nEach creature you control with a +1/+1 counter on it has trample. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
+      "power": 0,
+      "toughness": 3,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Evendo, Waking Haven",
+      "id": "2fa09104-acbe-4410-b101-2fe6ac28efde",
+      "mana_cost": "",
+      "type_line": "Land — Planet",
+      "oracle_text": "This land enters tapped.\n{T}: Add {G}.\nStation (Tap another creature you control: Put charge counters equal to its power on this Planet. Station only as a sorcery.)\n12+ | {G}, {T}: Add {G} for each creature you control.",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Station"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Evolution Sage",
+      "id": "d089c2c1-e304-4f28-8700-5b9b3029bdbc",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf Druid",
+      "oracle_text": "Landfall — Whenever a land you control enters, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+      "power": 3,
+      "toughness": 2,
+      "kewords": [
+        "Proliferate",
+        "Landfall"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Experimental Augury",
+      "id": "8b817b17-27cf-4f6b-baf2-4c4dbb3e71d1",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "oracle_text": "Look at the top three cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order. Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Proliferate"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Ezuri, Claw of Progress",
+      "id": "6bf721b0-2b5a-4085-b50c-89cbe7420673",
+      "mana_cost": "{2}{G}{U}",
+      "type_line": "Legendary Creature — Phyrexian Elf Warrior",
+      "oracle_text": "Whenever a creature you control with power 2 or less enters, you get an experience counter.\nAt the beginning of combat on your turn, put X +1/+1 counters on another target creature you control, where X is the number of experience counters you have.",
+      "power": 3,
+      "toughness": 3,
+      "kewords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "edf99449-b176-460b-afb3-14a35e3ae35a",
+          "component": "combo_piece",
+          "name": "Experience",
+          "type_line": "Card",
+          "uri": "https://api.scryfall.com/cards/edf99449-b176-460b-afb3-14a35e3ae35a"
+        },
+        {
+          "object": "related_card",
+          "id": "80f766a3-ec88-46ee-bf07-b6997cd0f95a",
+          "component": "combo_piece",
+          "name": "Ezuri, Claw of Progress",
+          "type_line": "Legendary Creature — Phyrexian Elf Warrior",
+          "uri": "https://api.scryfall.com/cards/80f766a3-ec88-46ee-bf07-b6997cd0f95a"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Farseek",
+      "id": "95e0760a-d285-493b-88cd-7556d9b10007",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "oracle_text": "Search your library for a Plains, Island, Swamp, or Mountain card, put it onto the battlefield tapped, then shuffle.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Fathom Mage",
+      "id": "22be6c55-f95e-498e-b6d2-65b7ed57d2d3",
+      "mana_cost": "{2}{G}{U}",
+      "type_line": "Creature — Human Wizard",
+      "oracle_text": "Evolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)\nWhenever a +1/+1 counter is put on this creature, you may draw a card.",
+      "power": 1,
+      "toughness": 1,
+      "kewords": [
+        "Evolve"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Flooded Grove",
+      "id": "e3bec498-9149-4045-8931-8decbb87c526",
+      "mana_cost": "",
+      "type_line": "Land",
+      "oracle_text": "{T}: Add {C}.\n{G/U}, {T}: Add {G}{G}, {G}{U}, or {U}{U}.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Force of Vigor",
+      "id": "017c415b-d635-43c6-92b8-8c95d1c4ff8d",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Instant",
+      "oracle_text": "If it's not your turn, you may exile a green card from your hand rather than pay this spell's mana cost.\nDestroy up to two target artifacts and/or enchantments.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 18,
+    "card": {
+      "name": "Forest",
+      "id": "a305e44f-4253-4754-b83f-1e34103d77b0",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Forgotten Ancient",
+      "id": "90fc94d9-b8af-4de8-a42d-ae508f8f1cd5",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Elemental",
+      "oracle_text": "Whenever a player casts a spell, you may put a +1/+1 counter on this creature.\nAt the beginning of your upkeep, you may move any number of +1/+1 counters from this creature onto other creatures.",
+      "power": 0,
+      "toughness": 3,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Frenzied Baloth",
+      "id": "c72d85e9-a0bc-4f73-8d73-c58843577f4e",
+      "mana_cost": "{G}{G}",
+      "type_line": "Creature — Beast",
+      "oracle_text": "This spell can't be countered.\nTrample, haste\nCreature spells you control can't be countered.\nCombat damage can't be prevented.",
+      "power": 3,
+      "toughness": 2,
+      "kewords": [
+        "Haste",
+        "Trample"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Galadhrim Ambush",
+      "id": "e69e06f0-6142-4f80-9208-362b3e74d51d",
+      "mana_cost": "{3}{G}",
+      "type_line": "Instant",
+      "oracle_text": "Create X 1/1 green Elf Warrior creature tokens, where X is the number of attacking creatures.\nPrevent all combat damage that would be dealt this turn by non-Elf creatures.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "6bbd1461-bd98-4ba9-a538-2dae0cf39b53",
+          "component": "combo_piece",
+          "name": "Galadhrim Ambush",
+          "type_line": "Instant",
+          "uri": "https://api.scryfall.com/cards/6bbd1461-bd98-4ba9-a538-2dae0cf39b53"
+        },
+        {
+          "object": "related_card",
+          "id": "023f668a-a8e6-4fcb-98d1-30adf343f050",
+          "component": "token",
+          "name": "Elf Warrior",
+          "type_line": "Token Creature — Elf Warrior",
+          "uri": "https://api.scryfall.com/cards/023f668a-a8e6-4fcb-98d1-30adf343f050"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Give // Take",
+      "id": "9af07d28-45a2-45d6-b1cb-0858c609a881",
+      "mana_cost": "{2}{G} // {2}{U}",
+      "type_line": "Sorcery // Sorcery",
+      "oracle_text": "",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Fuse"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Gnarlid Colony",
+      "id": "47565d10-96bf-4fb0-820f-f20a44a76b6f",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Beast",
+      "oracle_text": "Kicker {2}{G} (You may pay an additional {2}{G} as you cast this spell.)\nIf this creature was kicked, it enters with two +1/+1 counters on it.\nEach creature you control with a +1/+1 counter on it has trample. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
+      "power": 2,
+      "toughness": 2,
+      "kewords": [
+        "Kicker"
+      ],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "46f644a6-9621-429e-a0a0-4c74d0ecff2e",
+          "component": "combo_piece",
+          "name": "A-Gnarlid Colony",
+          "type_line": "Creature — Beast",
+          "uri": "https://api.scryfall.com/cards/46f644a6-9621-429e-a0a0-4c74d0ecff2e"
+        },
+        {
+          "object": "related_card",
+          "id": "47565d10-96bf-4fb0-820f-f20a44a76b6f",
+          "component": "combo_piece",
+          "name": "Gnarlid Colony",
+          "type_line": "Creature — Beast",
+          "uri": "https://api.scryfall.com/cards/47565d10-96bf-4fb0-820f-f20a44a76b6f"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Green Sun's Zenith",
+      "id": "70291c7b-a86f-4466-8502-c28765a89b2a",
+      "mana_cost": "{X}{G}",
+      "type_line": "Sorcery",
+      "oracle_text": "Search your library for a green creature card with mana value X or less, put it onto the battlefield, then shuffle. Shuffle Green Sun's Zenith into its owner's library.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Growth Spiral",
+      "id": "1e10e2b4-9639-41ae-8b8e-253224d3d513",
+      "mana_cost": "{G}{U}",
+      "type_line": "Instant",
+      "oracle_text": "Draw a card. You may put a land card from your hand onto the battlefield.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Hardened Scales",
+      "id": "fc69ad56-9ae2-4eb5-b7e2-558524f6cbcc",
+      "mana_cost": "{G}",
+      "type_line": "Enchantment",
+      "oracle_text": "If one or more +1/+1 counters would be put on a creature you control, that many plus one +1/+1 counters are put on it instead.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Herald of Secret Streams",
+      "id": "e6e1f2ab-e437-444e-9edb-73278d9c7616",
+      "mana_cost": "{3}{U}",
+      "type_line": "Creature — Merfolk Warrior",
+      "oracle_text": "Creatures you control with +1/+1 counters on them can't be blocked.",
+      "power": 2,
+      "toughness": 3,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Heroic Intervention",
+      "id": "e32c67d1-187f-40df-b3b3-6036f5c92834",
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "oracle_text": "Permanents you control gain hexproof and indestructible until end of turn.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Hinterland Harbor",
+      "id": "3eb512f5-9782-4c49-9b6e-4e967e42408b",
+      "mana_cost": "",
+      "type_line": "Land",
+      "oracle_text": "This land enters tapped unless you control a Forest or an Island.\n{T}: Add {G} or {U}.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Inexorable Tide",
+      "id": "40441345-23ca-47e4-b349-bd13d986e41e",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Enchantment",
+      "oracle_text": "Whenever you cast a spell, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Proliferate"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Ingenious Prodigy",
+      "id": "cf224968-b676-40dd-83c1-a9ee2ceba574",
+      "mana_cost": "{X}{U}",
+      "type_line": "Creature — Human Wizard",
+      "oracle_text": "Skulk (This creature can't be blocked by creatures with greater power.)\nThis creature enters with X +1/+1 counters on it.\nAt the beginning of your upkeep, if this creature has one or more +1/+1 counters on it, you may remove a +1/+1 counter from it. If you do, draw a card.",
+      "power": 0,
+      "toughness": 1,
+      "kewords": [
+        "Skulk"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Inspiring Call",
+      "id": "3e241642-5172-4437-b694-f6aa159d5cd9",
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "oracle_text": "Draw a card for each creature you control with a +1/+1 counter on it. Those creatures gain indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy them.)",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Iridescent Hornbeetle",
+      "id": "214ef641-b08c-42d0-94a5-3054fa7fcebc",
+      "mana_cost": "{4}{G}",
+      "type_line": "Creature — Insect",
+      "oracle_text": "At the beginning of your end step, create a 1/1 green Insect creature token for each +1/+1 counter you've put on creatures under your control this turn.",
+      "power": 3,
+      "toughness": 4,
+      "kewords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "214ef641-b08c-42d0-94a5-3054fa7fcebc",
+          "component": "combo_piece",
+          "name": "Iridescent Hornbeetle",
+          "type_line": "Creature — Insect",
+          "uri": "https://api.scryfall.com/cards/214ef641-b08c-42d0-94a5-3054fa7fcebc"
+        },
+        {
+          "object": "related_card",
+          "id": "538103da-aa42-436b-8d1a-8f774d005c9a",
+          "component": "combo_piece",
+          "name": "A-Iridescent Hornbeetle",
+          "type_line": "Creature — Insect",
+          "uri": "https://api.scryfall.com/cards/538103da-aa42-436b-8d1a-8f774d005c9a"
+        },
+        {
+          "object": "related_card",
+          "id": "84da9c36-5d9c-4e29-b6cc-c5c10e490f2e",
+          "component": "token",
+          "name": "Insect",
+          "type_line": "Token Creature — Insect",
+          "uri": "https://api.scryfall.com/cards/84da9c36-5d9c-4e29-b6cc-c5c10e490f2e"
+        }
+      ]
+    }
+  },
+  {
+    "count": 8,
+    "card": {
+      "name": "Island",
+      "id": "a2e22347-f0cb-4cfd-88a3-4f46a16e4946",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Jace, Cunning Castaway",
+      "id": "b75f56f2-88fd-44ba-ad02-56ea3391f173",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Legendary Planeswalker — Jace",
+      "oracle_text": "+1: Whenever one or more creatures you control deal combat damage to a player this turn, draw a card, then discard a card.\n−2: Create a 2/2 blue Illusion creature token with \"When this token becomes the target of a spell, sacrifice it.\"\n−5: Create two tokens that are copies of Jace, except they're not legendary.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "a10729a5-061a-4daf-91d6-0f6ce813a992",
+          "component": "token",
+          "name": "Illusion",
+          "type_line": "Token Creature — Illusion",
+          "uri": "https://api.scryfall.com/cards/a10729a5-061a-4daf-91d6-0f6ce813a992"
+        },
+        {
+          "object": "related_card",
+          "id": "b75f56f2-88fd-44ba-ad02-56ea3391f173",
+          "component": "combo_piece",
+          "name": "Jace, Cunning Castaway",
+          "type_line": "Legendary Planeswalker — Jace",
+          "uri": "https://api.scryfall.com/cards/b75f56f2-88fd-44ba-ad02-56ea3391f173"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Kami of Whispered Hopes",
+      "id": "5c644650-3861-4a78-9e39-a413b073ddac",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Spirit",
+      "oracle_text": "If one or more +1/+1 counters would be put on a permanent you control, that many plus one +1/+1 counters are put on that permanent instead.\n{T}: Add X mana of any one color, where X is this creature's power.",
+      "power": 1,
+      "toughness": 1,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Kurbis, Harvest Celebrant",
+      "id": "5ea94e69-36f0-47a6-b7f7-1379625a6955",
+      "mana_cost": "{X}{G}{G}",
+      "type_line": "Legendary Creature — Treefolk",
+      "oracle_text": "Kurbis enters with a number of +1/+1 counters on it equal to the amount of mana spent to cast it.\nRemove a +1/+1 counter from Kurbis: Prevent all damage that would be dealt this turn to another target creature with a +1/+1 counter on it.",
+      "power": 0,
+      "toughness": 0,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Lightning Greaves",
+      "id": "8b59b12c-fde5-4f19-a357-e09f06f490cc",
+      "mana_cost": "{2}",
+      "type_line": "Artifact — Equipment",
+      "oracle_text": "Equipped creature has haste and shroud. (It can't be the target of spells or abilities.)\nEquip {0}",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Equip"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Loading Zone",
+      "id": "0d2c95bd-79af-4a23-b265-62cc0b164e3e",
+      "mana_cost": "{3}{G}",
+      "type_line": "Enchantment",
+      "oracle_text": "If one or more counters would be put on a creature, Spacecraft, or Planet you control, twice that many of each of those kinds of counters are put on it instead.\nWarp {G} (You may cast this card from your hand for its warp cost. Exile this enchantment at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Warp"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Marwyn, the Nurturer",
+      "id": "aad61d99-5c8e-47b7-ab1a-e70905f59205",
+      "mana_cost": "{2}{G}",
+      "type_line": "Legendary Creature — Elf Druid",
+      "oracle_text": "Whenever another Elf you control enters, put a +1/+1 counter on Marwyn.\n{T}: Add an amount of {G} equal to Marwyn's power.",
+      "power": 1,
+      "toughness": 1,
+      "kewords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "8ef95e7a-9f07-41f8-908b-2df93e03d391",
+          "component": "combo_piece",
+          "name": "Marwyn's Kindred",
+          "type_line": "Sorcery",
+          "uri": "https://api.scryfall.com/cards/8ef95e7a-9f07-41f8-908b-2df93e03d391"
+        },
+        {
+          "object": "related_card",
+          "id": "aad61d99-5c8e-47b7-ab1a-e70905f59205",
+          "component": "combo_piece",
+          "name": "Marwyn, the Nurturer",
+          "type_line": "Legendary Creature — Elf Druid",
+          "uri": "https://api.scryfall.com/cards/aad61d99-5c8e-47b7-ab1a-e70905f59205"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Mistrise Village",
+      "id": "d44bccbf-6fab-46e4-8ddb-6577e27ec6e8",
+      "mana_cost": "",
+      "type_line": "Land",
+      "oracle_text": "This land enters tapped unless you control a Mountain or a Forest.\n{T}: Add {U}.\n{U}, {T}: The next spell you cast this turn can't be countered.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Nature's Lore",
+      "id": "5b42a79a-1f08-4e15-b40e-c993307ae066",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "oracle_text": "Search your library for a Forest card, put that card onto the battlefield, then shuffle.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Noxious Revival",
+      "id": "1bdd1243-1d14-496a-9b7a-0c5b34461361",
+      "mana_cost": "{G/P}",
+      "type_line": "Instant",
+      "oracle_text": "({G/P} can be paid with either {G} or 2 life.)\nPut target card from a graveyard on top of its owner's library.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Occult Epiphany",
+      "id": "6920c895-bc98-4871-a53f-219fa27a74e5",
+      "mana_cost": "{X}{U}",
+      "type_line": "Instant",
+      "oracle_text": "Draw X cards, then discard X cards. Create a 1/1 white Spirit creature token with flying for each card type among cards discarded this way.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "add661e7-b337-44e4-9614-ca958e20e86f",
+          "component": "combo_piece",
+          "name": "Occult Epiphany",
+          "type_line": "Instant",
+          "uri": "https://api.scryfall.com/cards/add661e7-b337-44e4-9614-ca958e20e86f"
+        },
+        {
+          "object": "related_card",
+          "id": "6bee4081-5d74-4cc2-ba2f-887bc8799513",
+          "component": "token",
+          "name": "Spirit",
+          "type_line": "Token Creature — Spirit",
+          "uri": "https://api.scryfall.com/cards/6bee4081-5d74-4cc2-ba2f-887bc8799513"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "One with the Kami",
+      "id": "d753c296-8cef-492d-ab41-e7ddb233d46e",
+      "mana_cost": "{3}{G}",
+      "type_line": "Enchantment — Aura",
+      "oracle_text": "Flash\nEnchant creature you control\nWhenever enchanted creature or another modified creature you control dies, create X 1/1 colorless Spirit creature tokens, where X is that creature's power. (Equipment, Auras you control, and counters are modifications.)",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Enchant",
+        "Flash"
+      ],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "16fcc1a2-f8e0-4126-81ef-4481985cf0bf",
+          "component": "combo_piece",
+          "name": "One with the Kami",
+          "type_line": "Enchantment — Aura",
+          "uri": "https://api.scryfall.com/cards/16fcc1a2-f8e0-4126-81ef-4481985cf0bf"
+        },
+        {
+          "object": "related_card",
+          "id": "ca20548f-6324-4858-adbe-87303ff1ca52",
+          "component": "token",
+          "name": "Spirit",
+          "type_line": "Token Creature — Spirit",
+          "uri": "https://api.scryfall.com/cards/ca20548f-6324-4858-adbe-87303ff1ca52"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Otawara, Soaring City",
+      "id": "486d7edc-d983-41f0-8b78-c99aecd72996",
+      "mana_cost": "",
+      "type_line": "Legendary Land",
+      "oracle_text": "{T}: Add {U}.\nChannel — {3}{U}, Discard this card: Return target artifact, creature, enchantment, or planeswalker to its owner's hand. This ability costs {1} less to activate for each legendary creature you control.",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Channel"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Ozolith, the Shattered Spire",
+      "id": "c9eee658-29e8-4ab5-8a0e-31f2f28a9a92",
+      "mana_cost": "{1}{G}",
+      "type_line": "Legendary Artifact",
+      "oracle_text": "If one or more +1/+1 counters would be put on an artifact or creature you control, that many plus one +1/+1 counters are put on it instead.\n{1}{G}, {T}: Put a +1/+1 counter on target artifact or creature you control. Activate only as a sorcery.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Cycling"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Ponder",
+      "id": "dc69f960-68ba-4315-8146-6a7a82047503",
+      "mana_cost": "{U}",
+      "type_line": "Sorcery",
+      "oracle_text": "Look at the top three cards of your library, then put them back in any order. You may shuffle.\nDraw a card.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Pongify",
+      "id": "4131fa63-5afc-4b63-a4b4-f47b4bced87f",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "oracle_text": "Destroy target creature. It can't be regenerated. Its controller creates a 3/3 green Ape creature token.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "4131fa63-5afc-4b63-a4b4-f47b4bced87f",
+          "component": "combo_piece",
+          "name": "Pongify",
+          "type_line": "Instant",
+          "uri": "https://api.scryfall.com/cards/4131fa63-5afc-4b63-a4b4-f47b4bced87f"
+        },
+        {
+          "object": "related_card",
+          "id": "4b2ee605-3c7a-4769-978d-3199bdc7c504",
+          "component": "token",
+          "name": "Ape",
+          "type_line": "Token Creature — Ape",
+          "uri": "https://api.scryfall.com/cards/4b2ee605-3c7a-4769-978d-3199bdc7c504"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Preordain",
+      "id": "dd29a0e5-c1de-4e8a-8866-715e9f9cde1f",
+      "mana_cost": "{U}",
+      "type_line": "Sorcery",
+      "oracle_text": "Scry 2, then draw a card. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Scry"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Rampant Growth",
+      "id": "b7c47024-5e08-4b17-b41a-7647f8b814b9",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "oracle_text": "Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Reality Shift",
+      "id": "50c6d211-5854-4dfd-b594-8fa1efe180a1",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "oracle_text": "Exile target creature. Its controller manifests the top card of their library. (That player puts the top card of their library onto the battlefield face down as a 2/2 creature. If it's a creature card, it can be turned face up any time for its mana cost.)",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Manifest"
+      ],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "50c6d211-5854-4dfd-b594-8fa1efe180a1",
+          "component": "combo_piece",
+          "name": "Reality Shift",
+          "type_line": "Instant",
+          "uri": "https://api.scryfall.com/cards/50c6d211-5854-4dfd-b594-8fa1efe180a1"
+        },
+        {
+          "object": "related_card",
+          "id": "01104ab1-84e1-4c78-853d-637c6554bdf9",
+          "component": "combo_piece",
+          "name": "Manifest",
+          "type_line": "Creature",
+          "uri": "https://api.scryfall.com/cards/01104ab1-84e1-4c78-853d-637c6554bdf9"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Rejuvenating Springs",
+      "id": "455be293-80cf-4bc6-8904-8dd21a2b9d19",
+      "mana_cost": "",
+      "type_line": "Land",
+      "oracle_text": "This land enters tapped unless you have two or more opponents.\n{T}: Add {G} or {U}.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Ruinous Intrusion",
+      "id": "47f8c11f-8171-416a-a4a3-6530ca3ba7a6",
+      "mana_cost": "{3}{G}",
+      "type_line": "Instant",
+      "oracle_text": "Exile target artifact or enchantment. Put X +1/+1 counters on target creature you control, where X is the mana value of the permanent exiled this way.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Sage of Hours",
+      "id": "8cb55caf-fc95-40dc-80af-5144f94333ee",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Human Wizard",
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on it.\nRemove all +1/+1 counters from this creature: For each five counters removed this way, take an extra turn after this one.",
+      "power": 1,
+      "toughness": 1,
+      "kewords": [
+        "Heroic"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Sakura-Tribe Elder",
+      "id": "d619aece-7eab-40f3-8f41-970065f0dc73",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Snake Shaman",
+      "oracle_text": "Sacrifice this creature: Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
+      "power": 1,
+      "toughness": 1,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Scythecat Cub",
+      "id": "b3dd3c7d-4685-4579-b483-14ddaaaddf5b",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Cat",
+      "oracle_text": "Trample\nLandfall — Whenever a land you control enters, put a +1/+1 counter on target creature you control. If this is the second time this ability has resolved this turn, double the number of +1/+1 counters on that creature instead.",
+      "power": 2,
+      "toughness": 2,
+      "kewords": [
+        "Trample",
+        "Landfall"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Simic Ascendancy",
+      "id": "fec1ffcd-84d3-44b3-b1d5-b33a4fee348a",
+      "mana_cost": "{G}{U}",
+      "type_line": "Enchantment",
+      "oracle_text": "{1}{G}{U}: Put a +1/+1 counter on target creature you control.\nWhenever one or more +1/+1 counters are put on a creature you control, put that many growth counters on this enchantment.\nAt the beginning of your upkeep, if this enchantment has twenty or more growth counters on it, you win the game.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Snakeskin Veil",
+      "id": "a3d2c692-7566-468e-9c86-47a9f768fde2",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "oracle_text": "Put a +1/+1 counter on target creature you control. It gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Sol Ring",
+      "id": "ee6e5a35-fe21-4dee-b0ef-a8f2841511ad",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Spore Swarm",
+      "id": "b2314215-23af-4c8e-860f-b029e151af36",
+      "mana_cost": "{3}{G}",
+      "type_line": "Instant",
+      "oracle_text": "Create three 1/1 green Saproling creature tokens.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "a49da8fe-559f-4c34-b904-c285188fb98d",
+          "component": "token",
+          "name": "Saproling",
+          "type_line": "Token Creature — Saproling",
+          "uri": "https://api.scryfall.com/cards/a49da8fe-559f-4c34-b904-c285188fb98d"
+        },
+        {
+          "object": "related_card",
+          "id": "b2314215-23af-4c8e-860f-b029e151af36",
+          "component": "combo_piece",
+          "name": "Spore Swarm",
+          "type_line": "Instant",
+          "uri": "https://api.scryfall.com/cards/b2314215-23af-4c8e-860f-b029e151af36"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Strength of Will",
+      "id": "68f985c7-7765-46c3-ad31-edae3abb9fbf",
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "oracle_text": "Until end of turn, target creature you control gains indestructible and \"Whenever this creature is dealt damage, put that many +1/+1 counters on it.\"",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Temple of Mystery",
+      "id": "af2de306-8a58-43fe-a0fe-dc8a545b8630",
+      "mana_cost": "",
+      "type_line": "Land",
+      "oracle_text": "This land enters tapped.\nWhen this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)\n{T}: Add {G} or {U}.",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Scry"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Three Visits",
+      "id": "4ee4ea37-621f-4ef7-b220-f4da3008e399",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "oracle_text": "Search your library for a Forest card, put it onto the battlefield, then shuffle.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Vineglimmer Snarl",
+      "id": "72151f2e-3980-466e-9741-6f7de8d898e7",
+      "mana_cost": "",
+      "type_line": "Land",
+      "oracle_text": "As this land enters, you may reveal a Forest or Island card from your hand. If you don't, this land enters tapped.\n{T}: Add {G} or {U}.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Warden of the Grove",
+      "id": "2414db96-0e2b-4f7c-9b97-41f8e310b752",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Hydra",
+      "oracle_text": "At the beginning of your end step, put a +1/+1 counter on this creature.\nWhenever another nontoken creature you control enters, it endures X, where X is the number of counters on this creature. (Put X +1/+1 counters on the creature that entered or create an X/X white Spirit creature token.)",
+      "power": 2,
+      "toughness": 2,
+      "kewords": [
+        "Endure"
+      ],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "2e3d7969-5dcb-434d-8a8b-fb16da288bc4",
+          "component": "combo_piece",
+          "name": "Warden of the Grove",
+          "type_line": "Creature — Hydra",
+          "uri": "https://api.scryfall.com/cards/2e3d7969-5dcb-434d-8a8b-fb16da288bc4"
+        },
+        {
+          "object": "related_card",
+          "id": "8ea4fc2f-95a4-49d0-b06e-b88d19637737",
+          "component": "token",
+          "name": "Spirit",
+          "type_line": "Token Creature — Spirit",
+          "uri": "https://api.scryfall.com/cards/8ea4fc2f-95a4-49d0-b06e-b88d19637737"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Wash Away",
+      "id": "43411ade-be80-4535-8baa-7055e78496df",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "oracle_text": "Cleave {1}{U}{U} (You may cast this spell for its cleave cost. If you do, remove the words in square brackets.)\nCounter target spell [that wasn't cast from its owner's hand].",
+      "power": null,
+      "toughness": null,
+      "kewords": [
+        "Cleave"
+      ],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Wave Goodbye",
+      "id": "45803e98-5d99-4bd9-adac-37c854649167",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Sorcery",
+      "oracle_text": "Return each creature without a +1/+1 counter on it to its owner's hand.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Whirler Rogue",
+      "id": "d1054d2b-a424-466d-8ec6-36f014849e43",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Creature — Human Rogue Artificer",
+      "oracle_text": "When this creature enters, create two 1/1 colorless Thopter artifact creature tokens with flying.\nTap two untapped artifacts you control: Target creature can't be blocked this turn.",
+      "power": 2,
+      "toughness": 2,
+      "kewords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "d1054d2b-a424-466d-8ec6-36f014849e43",
+          "component": "combo_piece",
+          "name": "Whirler Rogue",
+          "type_line": "Creature — Human Rogue Artificer",
+          "uri": "https://api.scryfall.com/cards/d1054d2b-a424-466d-8ec6-36f014849e43"
+        },
+        {
+          "object": "related_card",
+          "id": "bbac8690-2b00-4afe-8a2d-8e10c34843fc",
+          "component": "token",
+          "name": "Thopter",
+          "type_line": "Token Artifact Creature — Thopter",
+          "uri": "https://api.scryfall.com/cards/bbac8690-2b00-4afe-8a2d-8e10c34843fc"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Wild Beastmaster",
+      "id": "bc52bf91-a8fc-43de-9e28-3b40cd08445a",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Human Shaman",
+      "oracle_text": "Whenever this creature attacks, each other creature you control gets +X/+X until end of turn, where X is this creature's power.",
+      "power": 1,
+      "toughness": 1,
+      "kewords": [],
+      "all_parts": []
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Windswift Slice",
+      "id": "f8097193-1d32-4235-afd4-f6839602e4fb",
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "oracle_text": "Target creature you control deals damage equal to its power to target creature you don't control. Create a number of 1/1 green Elf Warrior creature tokens equal to the amount of excess damage dealt this way.",
+      "power": null,
+      "toughness": null,
+      "kewords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "b5707611-13e4-489f-85fa-a6ba01f5e8dc",
+          "component": "combo_piece",
+          "name": "Windswift Slice",
+          "type_line": "Instant",
+          "uri": "https://api.scryfall.com/cards/b5707611-13e4-489f-85fa-a6ba01f5e8dc"
+        },
+        {
+          "object": "related_card",
+          "id": "023f668a-a8e6-4fcb-98d1-30adf343f050",
+          "component": "token",
+          "name": "Elf Warrior",
+          "type_line": "Token Creature — Elf Warrior",
+          "uri": "https://api.scryfall.com/cards/023f668a-a8e6-4fcb-98d1-30adf343f050"
+        }
+      ]
+    }
+  },
+  {
+    "count": 1,
+    "card": {
+      "name": "Wood Elves",
+      "id": "527cf39d-29d1-4c19-9c49-ebf611ca15d5",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf Scout",
+      "oracle_text": "When this creature enters, search your library for a Forest card, put that card onto the battlefield, then shuffle.",
+      "power": 1,
+      "toughness": 1,
+      "kewords": [],
+      "all_parts": []
+    }
+  }
+]
