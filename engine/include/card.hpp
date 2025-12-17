@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 #include <vector>
 #include <optional>
@@ -35,7 +37,9 @@ public:
         : name(name), id(id), mana_cost(mana_cost), type_line(type_line),
           oracle_text(oracle_text), power(power), toughness(toughness),
           keywords(keywords), all_parts(all_parts) {};
-    ~Card();
+
+    bool operator==(const Card &other) const { return id == other.id; }
 
     bool isCreature() const;
+    int getRawCost() const;
 };

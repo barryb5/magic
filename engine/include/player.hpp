@@ -1,3 +1,5 @@
+#pragma once
+
 #include <vector>
 #include "card.hpp"
 
@@ -19,4 +21,6 @@ public:
     void start();
     void draw();
     void drawSpecific(const Card& card);
+    void changeLife(int life);
+    void mill(size_t n);
 };

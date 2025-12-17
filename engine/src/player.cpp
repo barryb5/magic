@@ -1,6 +1,6 @@
-#include "player.hpp"
+#include "../include/player.hpp"
 
-#include "card.hpp"
+#include "../include/card.hpp"
 #include <random>
 #include <vector>
 #include <algorithm>
@@ -44,15 +44,36 @@ void Player::drawSpecific(const Card& card)
         return;
     }
 
-    auto deckItr = std::find(deck.begin(), deck.end(), card);
+    auto libraryItr = std::find(library.begin(), library.end(), card);
 
-    if (deckItr == deck.end())
+    if (libraryItr == library.end())
     {
         // Card isn't in deck
         std::cout << "ERROR card " << card.name << " is not in your deck" << std::endl;
         return;
     }
 
-    hand.push_back(std::move(*deckItr));
-    deck.erase(deckItr);
+    hand.push_back(std::move(*libraryItr));
+    library.erase(libraryItr);
+}
+
+void Player::changeLife(int life)
+{
+    health += life;
+}
+
+void Player::mill(size_t n)
+{
+    // In case mill is larger than deck
+    std::size_t k = std::min(n, library.size());
+    auto first = library.begin();
+    auto mid = library.begin() + static_cast<std::ptrdiff_t>(k);
+
+    graveyard.insert(
+        graveyard.begin(),
+        std::make_move_iterator(std::reverse_iterator(mid)),
+        std::make_move_iterator(std::reverse_iterator(first)));
+
+    // Remove those k elements from vec1
+    graveyard.erase(first, mid);
 }

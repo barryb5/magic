@@ -29,4 +29,6 @@ ENDIF()
 
 add_executable(engine
     main.cpp
-    src/card.cpp)
+    src/card.cpp
+    src/player.cpp
+    src/helpers.cpp)
