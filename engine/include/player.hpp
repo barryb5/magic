@@ -15,7 +15,7 @@ public:
     std::vector<Card> exile{};
     std::vector<Card> hand{};
 
-    Player(Card commander, std::vector<Card> deck) : commander(commander), deck(deck) {}
+    Player(Card commander, std::vector<Card> deck) : commander(std::move(commander)), deck(std::move(deck)) {}
 
     void shuffle();
     void start();

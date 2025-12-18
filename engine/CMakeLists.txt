@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.1.0)
+cmake_minimum_required(VERSION 3.11)
 project (engine)
 
 # Set Configuration specific DEFINES
@@ -27,8 +27,12 @@ ELSE()
   add_definitions ( "-g ")
 ENDIF()
 
+find_package(nlohmann_json 3.12.0 REQUIRED)
+
 add_executable(engine
     main.cpp
     src/card.cpp
     src/player.cpp
     src/helpers.cpp)
+
+target_link_libraries(engine PRIVATE nlohmann_json::nlohmann_json)

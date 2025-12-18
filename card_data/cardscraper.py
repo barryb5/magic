@@ -66,7 +66,7 @@ class Card:
     oracle_text: str
     power: int | None
     toughness: int | None
-    kewords: list[str]
+    keywords: list[str]
     all_parts: list[dict] | None
 
 def organize_card_data(card_data: dict) -> Card:
@@ -78,7 +78,7 @@ def organize_card_data(card_data: dict) -> Card:
     card.oracle_text = card_data.get("oracle_text", "")
     card.power = int(card_data["power"]) if "power" in card_data and card_data["power"].isdigit() else None
     card.toughness = int(card_data["toughness"]) if "toughness" in card_data and card_data["toughness"].isdigit() else None
-    card.kewords = card_data.get("keywords", [])
+    card.keywords = card_data.get("keywords", [])
     card.all_parts = card_data.get("all_parts", [])
     return card
 

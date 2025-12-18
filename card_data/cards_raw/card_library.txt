@@ -9,7 +9,7 @@
       "oracle_text": "Counter target spell. Its controller may draw up to two cards at the beginning of the next turn's upkeep.\nYou draw a card at the beginning of the next turn's upkeep.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -23,7 +23,7 @@
       "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -37,7 +37,7 @@
       "oracle_text": "Each other creature you control enters with a number of additional +1/+1 counters on it equal to Arwen's toughness.",
       "power": 2,
       "toughness": 1,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -51,7 +51,7 @@
       "oracle_text": "Destroy target permanent. Its controller creates a 3/3 green Beast creature token.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": [
         {
           "object": "related_card",
@@ -82,7 +82,7 @@
       "oracle_text": "Whenever a creature you control with a +1/+1 counter on it deals combat damage to a player, you may draw a card.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -96,7 +96,7 @@
       "oracle_text": "Creatures with power less than this creature's power can't block creatures you control.\nWhenever another creature you control enters, put a +1/+1 counter on this creature.",
       "power": 1,
       "toughness": 1,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -110,7 +110,7 @@
       "oracle_text": "Whenever you draw a card, put a +1/+1 counter on this creature.\nWhen this creature dies, create X 1/1 blue Squid creature tokens with islandwalk, where X is the number of +1/+1 counters on this creature. (They can't be blocked as long as defending player controls an Island.)",
       "power": 1,
       "toughness": 1,
-      "kewords": [],
+      "keywords": [],
       "all_parts": [
         {
           "object": "related_card",
@@ -141,7 +141,7 @@
       "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": [
         {
           "object": "related_card",
@@ -172,7 +172,7 @@
       "oracle_text": "Counter target spell.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -186,7 +186,7 @@
       "oracle_text": "Return target nonland permanent you don't control to its owner's hand.\nOverload {6}{U} (You may cast this spell for its overload cost. If you do, change \"target\" in its text to \"each.\")",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Overload"
       ],
       "all_parts": []
@@ -202,7 +202,7 @@
       "oracle_text": "{T}: Add {C}.\n{T}: Add one mana of any color. Spend this mana only to cast a legendary spell, and that spell can't be countered.",
       "power": 1,
       "toughness": 2,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -216,7 +216,7 @@
       "oracle_text": "(This land isn't a spell, it's affected by summoning sickness, and it has \"{T}: Add {G}.\")",
       "power": 1,
       "toughness": 1,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -230,7 +230,7 @@
       "oracle_text": "When this creature enters, put a +1/+1 counter on target creature.\nEach creature you control with a +1/+1 counter on it has trample. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
       "power": 0,
       "toughness": 3,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -244,7 +244,7 @@
       "oracle_text": "This land enters tapped.\n{T}: Add {G}.\nStation (Tap another creature you control: Put charge counters equal to its power on this Planet. Station only as a sorcery.)\n12+ | {G}, {T}: Add {G} for each creature you control.",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Station"
       ],
       "all_parts": []
@@ -260,7 +260,7 @@
       "oracle_text": "Landfall — Whenever a land you control enters, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
       "power": 3,
       "toughness": 2,
-      "kewords": [
+      "keywords": [
         "Proliferate",
         "Landfall"
       ],
@@ -277,7 +277,7 @@
       "oracle_text": "Look at the top three cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order. Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Proliferate"
       ],
       "all_parts": []
@@ -293,7 +293,7 @@
       "oracle_text": "Whenever a creature you control with power 2 or less enters, you get an experience counter.\nAt the beginning of combat on your turn, put X +1/+1 counters on another target creature you control, where X is the number of experience counters you have.",
       "power": 3,
       "toughness": 3,
-      "kewords": [],
+      "keywords": [],
       "all_parts": [
         {
           "object": "related_card",
@@ -324,7 +324,7 @@
       "oracle_text": "Search your library for a Plains, Island, Swamp, or Mountain card, put it onto the battlefield tapped, then shuffle.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -338,7 +338,7 @@
       "oracle_text": "Evolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)\nWhenever a +1/+1 counter is put on this creature, you may draw a card.",
       "power": 1,
       "toughness": 1,
-      "kewords": [
+      "keywords": [
         "Evolve"
       ],
       "all_parts": []
@@ -354,7 +354,7 @@
       "oracle_text": "{T}: Add {C}.\n{G/U}, {T}: Add {G}{G}, {G}{U}, or {U}{U}.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -368,7 +368,7 @@
       "oracle_text": "If it's not your turn, you may exile a green card from your hand rather than pay this spell's mana cost.\nDestroy up to two target artifacts and/or enchantments.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -382,7 +382,7 @@
       "oracle_text": "({T}: Add {G}.)",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -396,7 +396,7 @@
       "oracle_text": "Whenever a player casts a spell, you may put a +1/+1 counter on this creature.\nAt the beginning of your upkeep, you may move any number of +1/+1 counters from this creature onto other creatures.",
       "power": 0,
       "toughness": 3,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -410,7 +410,7 @@
       "oracle_text": "This spell can't be countered.\nTrample, haste\nCreature spells you control can't be countered.\nCombat damage can't be prevented.",
       "power": 3,
       "toughness": 2,
-      "kewords": [
+      "keywords": [
         "Haste",
         "Trample"
       ],
@@ -427,7 +427,7 @@
       "oracle_text": "Create X 1/1 green Elf Warrior creature tokens, where X is the number of attacking creatures.\nPrevent all combat damage that would be dealt this turn by non-Elf creatures.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": [
         {
           "object": "related_card",
@@ -458,7 +458,7 @@
       "oracle_text": "",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Fuse"
       ],
       "all_parts": []
@@ -474,7 +474,7 @@
       "oracle_text": "Kicker {2}{G} (You may pay an additional {2}{G} as you cast this spell.)\nIf this creature was kicked, it enters with two +1/+1 counters on it.\nEach creature you control with a +1/+1 counter on it has trample. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
       "power": 2,
       "toughness": 2,
-      "kewords": [
+      "keywords": [
         "Kicker"
       ],
       "all_parts": [
@@ -507,7 +507,7 @@
       "oracle_text": "Search your library for a green creature card with mana value X or less, put it onto the battlefield, then shuffle. Shuffle Green Sun's Zenith into its owner's library.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -521,7 +521,7 @@
       "oracle_text": "Draw a card. You may put a land card from your hand onto the battlefield.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -535,7 +535,7 @@
       "oracle_text": "If one or more +1/+1 counters would be put on a creature you control, that many plus one +1/+1 counters are put on it instead.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -549,7 +549,7 @@
       "oracle_text": "Creatures you control with +1/+1 counters on them can't be blocked.",
       "power": 2,
       "toughness": 3,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -563,7 +563,7 @@
       "oracle_text": "Permanents you control gain hexproof and indestructible until end of turn.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -577,7 +577,7 @@
       "oracle_text": "This land enters tapped unless you control a Forest or an Island.\n{T}: Add {G} or {U}.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -591,7 +591,7 @@
       "oracle_text": "Whenever you cast a spell, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Proliferate"
       ],
       "all_parts": []
@@ -607,7 +607,7 @@
       "oracle_text": "Skulk (This creature can't be blocked by creatures with greater power.)\nThis creature enters with X +1/+1 counters on it.\nAt the beginning of your upkeep, if this creature has one or more +1/+1 counters on it, you may remove a +1/+1 counter from it. If you do, draw a card.",
       "power": 0,
       "toughness": 1,
-      "kewords": [
+      "keywords": [
         "Skulk"
       ],
       "all_parts": []
@@ -623,7 +623,7 @@
       "oracle_text": "Draw a card for each creature you control with a +1/+1 counter on it. Those creatures gain indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy them.)",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -637,7 +637,7 @@
       "oracle_text": "At the beginning of your end step, create a 1/1 green Insect creature token for each +1/+1 counter you've put on creatures under your control this turn.",
       "power": 3,
       "toughness": 4,
-      "kewords": [],
+      "keywords": [],
       "all_parts": [
         {
           "object": "related_card",
@@ -676,7 +676,7 @@
       "oracle_text": "({T}: Add {U}.)",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -690,7 +690,7 @@
       "oracle_text": "+1: Whenever one or more creatures you control deal combat damage to a player this turn, draw a card, then discard a card.\n−2: Create a 2/2 blue Illusion creature token with \"When this token becomes the target of a spell, sacrifice it.\"\n−5: Create two tokens that are copies of Jace, except they're not legendary.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": [
         {
           "object": "related_card",
@@ -721,7 +721,7 @@
       "oracle_text": "If one or more +1/+1 counters would be put on a permanent you control, that many plus one +1/+1 counters are put on that permanent instead.\n{T}: Add X mana of any one color, where X is this creature's power.",
       "power": 1,
       "toughness": 1,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -735,7 +735,7 @@
       "oracle_text": "Kurbis enters with a number of +1/+1 counters on it equal to the amount of mana spent to cast it.\nRemove a +1/+1 counter from Kurbis: Prevent all damage that would be dealt this turn to another target creature with a +1/+1 counter on it.",
       "power": 0,
       "toughness": 0,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -749,7 +749,7 @@
       "oracle_text": "Equipped creature has haste and shroud. (It can't be the target of spells or abilities.)\nEquip {0}",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Equip"
       ],
       "all_parts": []
@@ -765,7 +765,7 @@
       "oracle_text": "If one or more counters would be put on a creature, Spacecraft, or Planet you control, twice that many of each of those kinds of counters are put on it instead.\nWarp {G} (You may cast this card from your hand for its warp cost. Exile this enchantment at the beginning of the next end step, then you may cast it from exile on a later turn.)",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Warp"
       ],
       "all_parts": []
@@ -781,7 +781,7 @@
       "oracle_text": "Whenever another Elf you control enters, put a +1/+1 counter on Marwyn.\n{T}: Add an amount of {G} equal to Marwyn's power.",
       "power": 1,
       "toughness": 1,
-      "kewords": [],
+      "keywords": [],
       "all_parts": [
         {
           "object": "related_card",
@@ -812,7 +812,7 @@
       "oracle_text": "This land enters tapped unless you control a Mountain or a Forest.\n{T}: Add {U}.\n{U}, {T}: The next spell you cast this turn can't be countered.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -826,7 +826,7 @@
       "oracle_text": "Search your library for a Forest card, put that card onto the battlefield, then shuffle.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -840,7 +840,7 @@
       "oracle_text": "({G/P} can be paid with either {G} or 2 life.)\nPut target card from a graveyard on top of its owner's library.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -854,7 +854,7 @@
       "oracle_text": "Draw X cards, then discard X cards. Create a 1/1 white Spirit creature token with flying for each card type among cards discarded this way.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": [
         {
           "object": "related_card",
@@ -885,7 +885,7 @@
       "oracle_text": "Flash\nEnchant creature you control\nWhenever enchanted creature or another modified creature you control dies, create X 1/1 colorless Spirit creature tokens, where X is that creature's power. (Equipment, Auras you control, and counters are modifications.)",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Enchant",
         "Flash"
       ],
@@ -919,7 +919,7 @@
       "oracle_text": "{T}: Add {U}.\nChannel — {3}{U}, Discard this card: Return target artifact, creature, enchantment, or planeswalker to its owner's hand. This ability costs {1} less to activate for each legendary creature you control.",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Channel"
       ],
       "all_parts": []
@@ -935,7 +935,7 @@
       "oracle_text": "If one or more +1/+1 counters would be put on an artifact or creature you control, that many plus one +1/+1 counters are put on it instead.\n{1}{G}, {T}: Put a +1/+1 counter on target artifact or creature you control. Activate only as a sorcery.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Cycling"
       ],
       "all_parts": []
@@ -951,7 +951,7 @@
       "oracle_text": "Look at the top three cards of your library, then put them back in any order. You may shuffle.\nDraw a card.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -965,7 +965,7 @@
       "oracle_text": "Destroy target creature. It can't be regenerated. Its controller creates a 3/3 green Ape creature token.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": [
         {
           "object": "related_card",
@@ -996,7 +996,7 @@
       "oracle_text": "Scry 2, then draw a card. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Scry"
       ],
       "all_parts": []
@@ -1012,7 +1012,7 @@
       "oracle_text": "Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -1026,7 +1026,7 @@
       "oracle_text": "Exile target creature. Its controller manifests the top card of their library. (That player puts the top card of their library onto the battlefield face down as a 2/2 creature. If it's a creature card, it can be turned face up any time for its mana cost.)",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Manifest"
       ],
       "all_parts": [
@@ -1059,7 +1059,7 @@
       "oracle_text": "This land enters tapped unless you have two or more opponents.\n{T}: Add {G} or {U}.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -1073,7 +1073,7 @@
       "oracle_text": "Exile target artifact or enchantment. Put X +1/+1 counters on target creature you control, where X is the mana value of the permanent exiled this way.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -1087,7 +1087,7 @@
       "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on it.\nRemove all +1/+1 counters from this creature: For each five counters removed this way, take an extra turn after this one.",
       "power": 1,
       "toughness": 1,
-      "kewords": [
+      "keywords": [
         "Heroic"
       ],
       "all_parts": []
@@ -1103,7 +1103,7 @@
       "oracle_text": "Sacrifice this creature: Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
       "power": 1,
       "toughness": 1,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -1117,7 +1117,7 @@
       "oracle_text": "Trample\nLandfall — Whenever a land you control enters, put a +1/+1 counter on target creature you control. If this is the second time this ability has resolved this turn, double the number of +1/+1 counters on that creature instead.",
       "power": 2,
       "toughness": 2,
-      "kewords": [
+      "keywords": [
         "Trample",
         "Landfall"
       ],
@@ -1134,7 +1134,7 @@
       "oracle_text": "{1}{G}{U}: Put a +1/+1 counter on target creature you control.\nWhenever one or more +1/+1 counters are put on a creature you control, put that many growth counters on this enchantment.\nAt the beginning of your upkeep, if this enchantment has twenty or more growth counters on it, you win the game.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -1148,7 +1148,7 @@
       "oracle_text": "Put a +1/+1 counter on target creature you control. It gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -1162,7 +1162,7 @@
       "oracle_text": "{T}: Add {C}{C}.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -1176,7 +1176,7 @@
       "oracle_text": "Create three 1/1 green Saproling creature tokens.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": [
         {
           "object": "related_card",
@@ -1207,7 +1207,7 @@
       "oracle_text": "Until end of turn, target creature you control gains indestructible and \"Whenever this creature is dealt damage, put that many +1/+1 counters on it.\"",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -1221,7 +1221,7 @@
       "oracle_text": "This land enters tapped.\nWhen this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)\n{T}: Add {G} or {U}.",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Scry"
       ],
       "all_parts": []
@@ -1237,7 +1237,7 @@
       "oracle_text": "Search your library for a Forest card, put it onto the battlefield, then shuffle.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -1251,7 +1251,7 @@
       "oracle_text": "As this land enters, you may reveal a Forest or Island card from your hand. If you don't, this land enters tapped.\n{T}: Add {G} or {U}.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -1265,7 +1265,7 @@
       "oracle_text": "At the beginning of your end step, put a +1/+1 counter on this creature.\nWhenever another nontoken creature you control enters, it endures X, where X is the number of counters on this creature. (Put X +1/+1 counters on the creature that entered or create an X/X white Spirit creature token.)",
       "power": 2,
       "toughness": 2,
-      "kewords": [
+      "keywords": [
         "Endure"
       ],
       "all_parts": [
@@ -1298,7 +1298,7 @@
       "oracle_text": "Cleave {1}{U}{U} (You may cast this spell for its cleave cost. If you do, remove the words in square brackets.)\nCounter target spell [that wasn't cast from its owner's hand].",
       "power": null,
       "toughness": null,
-      "kewords": [
+      "keywords": [
         "Cleave"
       ],
       "all_parts": []
@@ -1314,7 +1314,7 @@
       "oracle_text": "Return each creature without a +1/+1 counter on it to its owner's hand.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -1328,7 +1328,7 @@
       "oracle_text": "When this creature enters, create two 1/1 colorless Thopter artifact creature tokens with flying.\nTap two untapped artifacts you control: Target creature can't be blocked this turn.",
       "power": 2,
       "toughness": 2,
-      "kewords": [],
+      "keywords": [],
       "all_parts": [
         {
           "object": "related_card",
@@ -1359,7 +1359,7 @@
       "oracle_text": "Whenever this creature attacks, each other creature you control gets +X/+X until end of turn, where X is this creature's power.",
       "power": 1,
       "toughness": 1,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   },
@@ -1373,7 +1373,7 @@
       "oracle_text": "Target creature you control deals damage equal to its power to target creature you don't control. Create a number of 1/1 green Elf Warrior creature tokens equal to the amount of excess damage dealt this way.",
       "power": null,
       "toughness": null,
-      "kewords": [],
+      "keywords": [],
       "all_parts": [
         {
           "object": "related_card",
@@ -1404,7 +1404,7 @@
       "oracle_text": "When this creature enters, search your library for a Forest card, put that card onto the battlefield, then shuffle.",
       "power": 1,
       "toughness": 1,
-      "kewords": [],
+      "keywords": [],
       "all_parts": []
     }
   }
