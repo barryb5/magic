@@ -12,16 +12,18 @@ void Player::shuffle()
     std::random_device rd;
     std::mt19937 g(rd());
 
-    std::shuffle(deck.begin(), deck.end(), g);
+    std::shuffle(library.begin(), library.end(), g);
 }
 
 void Player::start()
 {
+    library = deck;
+
     shuffle();
 
     // Draw first 7 cards
-    std::move(deck.begin(), deck.begin() + 7, std::back_inserter(hand));
-    deck.erase(deck.begin(), deck.begin() + 7);
+    std::move(library.begin(), library.begin() + 7, std::back_inserter(hand));
+    deck.erase(library.begin(), library.begin() + 7);
 
     // Put commander in command zone
     commander_in_command_zone = true;
@@ -29,13 +31,15 @@ void Player::start()
 
 void Player::draw()
 {
-    hand.push_back(std::move(deck.front()));
-    deck.erase(deck.begin());
+    hand.push_back(std::move(library.front()));
+    library.erase(library.begin());
 }
 
 void Player::drawSpecific(const Card& card)
 {
-    auto handItr = std::find(hand.begin(), hand.end(), card);
+    auto handItr = std::find_if(hand.begin(), hand.end(),
+                                [&card](auto const &cptr)
+                                { return cptr && *cptr == card; });
 
     if (handItr != hand.end())
     {
@@ -44,7 +48,9 @@ void Player::drawSpecific(const Card& card)
         return;
     }
 
-    auto libraryItr = std::find(library.begin(), library.end(), card);
+    auto libraryItr = std::find_if(library.begin(), library.end(),
+                                     [&card](auto const &cptr)
+                                     { return cptr && *cptr == card; });
 
     if (libraryItr == library.end())
     {

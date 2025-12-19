@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <memory>
 #include "card.hpp"
 
 class Player
@@ -9,13 +10,13 @@ public:
     Card commander;
     bool commander_in_command_zone = true;
     int health = 40;
-    std::vector<Card> deck;
-    std::vector<Card> library{};
-    std::vector<Card> graveyard{};
-    std::vector<Card> exile{};
-    std::vector<Card> hand{};
+    std::vector<std::shared_ptr<Card>> deck;
+    std::vector<std::shared_ptr<Card>> library{};
+    std::vector<std::shared_ptr<Card>> graveyard{};
+    std::vector<std::shared_ptr<Card>> exile{};
+    std::vector<std::shared_ptr<Card>> hand{};
 
-    Player(Card commander, std::vector<Card> deck) : commander(std::move(commander)), deck(std::move(deck)) {}
+    Player(Card commander, std::vector<std::shared_ptr<Card>> deck) : commander(std::move(commander)), deck(std::move(deck)) {}
 
     void shuffle();
     void start();
