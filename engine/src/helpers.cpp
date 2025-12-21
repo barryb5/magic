@@ -2,6 +2,11 @@
 
 #include <string>
 #include <algorithm>
+#include <nlohmann/json.hpp>
+#include <fstream>
+#include <iostream>
+#include <vector>
+#include "../include/card.hpp"
 
 std::string trim(std::string s)
 {
@@ -55,4 +60,92 @@ bool isDigits(const std::string &s)
     return !s.empty() && std::all_of(s.begin(), s.end(),
                                      [](unsigned char c)
                                      { return std::isdigit(c); });
+}
+
+std::vector<std::shared_ptr<Card>> load_cards_to_deck(const std::string &path)
+{
+    std::vector<std::shared_ptr<Card>> deck;
+
+    std::ifstream library(path);
+    if (!library.is_open())
+    {
+        std::cerr << "Error opening file: " << path << "\n";
+        return deck;
+    }
+
+    // Read entire file into a string first (best for JSON array files)
+    std::string content((std::istreambuf_iterator<char>(library)),
+                        std::istreambuf_iterator<char>());
+
+    // Try parsing as a single JSON document (array or object)
+    try
+    {
+        json j = json::parse(content);
+
+        if (j.is_array())
+        {
+            deck.reserve(j.size());
+            for (const auto &item : j)
+            {
+                // Uses your from_json(json, Card&)
+                Card c = item.get<Card>();
+                deck.push_back(std::make_shared<Card>(std::move(c)));
+            }
+        }
+        else if (j.is_object())
+        {
+            Card c = j.get<Card>();
+            deck.push_back(std::make_shared<Card>(std::move(c)));
+        }
+        else
+        {
+            std::cerr << "Top-level JSON is not an array or object.\n";
+        }
+
+        return deck;
+    }
+    catch (const json::parse_error &)
+    {
+        // If parsing whole file fails, fall back to JSONL (one object per line).
+    }
+
+    library.close();
+    library.open(path);
+    if (!library.is_open())
+    {
+        std::cerr << "Error reopening file: " << path << "\n";
+        return deck;
+    }
+
+    std::string line;
+    size_t line_no = 0;
+    while (std::getline(library, line))
+    {
+        ++line_no;
+        if (line.empty())
+            continue;
+
+        try
+        {
+            json jline = json::parse(line);
+            if (!jline.is_object())
+            {
+                std::cerr << "Line " << line_no << " is not a JSON object; skipping.\n";
+                continue;
+            }
+
+            Card c = jline.get<Card>();
+            deck.push_back(std::make_shared<Card>(std::move(c)));
+        }
+        catch (const json::parse_error &e)
+        {
+            std::cerr << "JSON parse error on line " << line_no << ": " << e.what() << "\n";
+        }
+        catch (const json::type_error &e)
+        {
+            std::cerr << "JSON type error on line " << line_no << ": " << e.what() << "\n";
+        }
+    }
+
+    return deck;
 }

@@ -1,28 +1,19 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
+#include "include/helpers.hpp"
+#include <vector>
+#include "include/card.hpp"
+#include <memory>
 
 int main(int argc, char** argv)
 {
     std::cout << "Hello World Test" << std::endl;
 
-    std::ifstream library("card_data/cards_raw/card_library.txt");
-    std::string line;
+    std::vector<std::shared_ptr<Card>> deck =
+        load_cards_to_deck("card_data/cards_raw/card_library.txt");
 
-    if (library.is_open())
-    {
-        // Read data line by line from the file
-        while (std::getline(library, line))
-        {
-            std::cout << line << std::endl;
-        }
-        // Close the file when done (good practice, though automatic on destruction)
-        library.close();
-    }
-    else
-    {
-        std::cerr << "Error opening file" << std::endl;
-    }
+    std::cout << "Loaded " << deck.size() << " cards\n";
 
     return 0;
 }
