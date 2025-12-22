@@ -79,6 +79,7 @@ public:
 
     bool isCreature() const;
     int getRawCost() const;
+    void printNameAndOracle() const;
 };
 
 inline void from_json(const json &j, Card &c)
@@ -116,4 +117,14 @@ inline void from_json(const json &j, Card &c)
             }
         }
     }
+}
+
+struct DeckEntry {
+    int count = 1;
+    Card card;
+};
+
+inline void from_json(const json& j, DeckEntry& e) {
+    e.count = j.value("count", 1);
+    e.card  = j.at("card").get<Card>();
 }

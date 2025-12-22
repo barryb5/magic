@@ -4,6 +4,12 @@
 #include <string>
 #include <cctype>
 #include <algorithm>
+#include <iostream>
+
+void Card::printNameAndOracle() const
+{
+    std::cout << "- " << name << " - " << oracle_text << "\n";
+}
 
 bool Card::isCreature() const
 {

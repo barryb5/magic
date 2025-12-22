@@ -7,6 +7,49 @@
 #include <iterator>
 #include <iostream>
 
+Player::Player(std::string commander_name, std::vector<std::shared_ptr<Card>> deck)
+    : deck(std::move(deck))
+{
+    // Find commander card in deck by name
+    auto it = std::find_if(this->deck.begin(), this->deck.end(),
+                           [&commander_name](const std::shared_ptr<Card>& cptr)
+                           { return cptr && cptr->name == commander_name; });
+
+    if (it != this->deck.end())
+    {
+        commander = **it;
+        // Remove commander from deck
+        this->deck.erase(it);
+    }
+    else
+    {
+        std::cerr << "Commander card '" << commander_name << "' not found in deck. Using default Card.\n";
+        commander = Card();
+    }
+}
+
+void Player::printCards() const
+{
+    std::cout << "Player's Cards:\n";
+    std::cout << "Commander: " << commander.name << "\n";
+    std::cout << "Deck (" << deck.size() << " cards):\n";
+    for (const auto& card_ptr : deck)
+    {
+        if (card_ptr)
+            std::cout << "- " << card_ptr->name << "\n";
+    }
+}
+
+void Player::printHand() const
+{
+    std::cout << "Player's Hand (" << hand.size() << " cards):\n";
+    for (const auto& card_ptr : hand)
+    {
+        if (card_ptr)
+            card_ptr->printNameAndOracle();
+    }
+}
+
 void Player::shuffle()
 {
     std::random_device rd;

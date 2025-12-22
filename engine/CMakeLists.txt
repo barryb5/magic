@@ -30,12 +30,30 @@ ELSE()
   add_definitions ( "-rdynamic ")
 ENDIF()
 
-find_package(nlohmann_json 3.12.0 REQUIRED)
+include(FetchContent)
+
+
+find_package(nlohmann_json 3.12.0 CONFIG QUIET)
+
+if(NOT nlohmann_json_FOUND)
+  message(STATUS "nlohmann_json >= 3.12.0 not found. Fetching with FetchContent...")
+
+  # Optional: avoid building tests from the dependency
+  set(JSON_BuildTests OFF CACHE BOOL "" FORCE)
+
+  FetchContent_Declare(
+    nlohmann_json
+    GIT_REPOSITORY https://github.com/nlohmann/json.git
+    GIT_TAG v3.12.0
+  )
+  FetchContent_MakeAvailable(nlohmann_json)
+endif()
+
+file(GLOB SOURCE_FILES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 
 add_executable(engine
     main.cpp
-    src/card.cpp
-    src/player.cpp
-    src/helpers.cpp)
+    ${SOURCE_FILES}
+)
 
 target_link_libraries(engine PRIVATE nlohmann_json::nlohmann_json)

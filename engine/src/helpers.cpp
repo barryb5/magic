@@ -62,7 +62,7 @@ bool isDigits(const std::string &s)
                                      { return std::isdigit(c); });
 }
 
-std::vector<std::shared_ptr<Card>> load_cards_to_deck(const std::string &path)
+std::vector<std::shared_ptr<Card>> load_cards_to_deck(const std::string& path)
 {
     std::vector<std::shared_ptr<Card>> deck;
 
@@ -73,79 +73,92 @@ std::vector<std::shared_ptr<Card>> load_cards_to_deck(const std::string &path)
         return deck;
     }
 
-    // Read entire file into a string first (best for JSON array files)
-    std::string content((std::istreambuf_iterator<char>(library)),
-                        std::istreambuf_iterator<char>());
+    // Read entire file into a string (best for JSON array files)
+    const std::string content((std::istreambuf_iterator<char>(library)),
+                               std::istreambuf_iterator<char>());
 
-    // Try parsing as a single JSON document (array or object)
     try
     {
         json j = json::parse(content);
 
-        if (j.is_array())
+        if (!j.is_array())
         {
-            deck.reserve(j.size());
-            for (const auto &item : j)
+            std::cerr << "Expected top-level JSON array in: " << path << "\n";
+            return deck;
+        }
+
+        // Reserve based on sum of counts (optional, but avoids reallocs)
+        size_t total_cards = 0;
+        for (const auto& entry : j)
+        {
+            if (entry.is_object())
             {
-                // Uses your from_json(json, Card&)
-                Card c = item.get<Card>();
-                deck.push_back(std::make_shared<Card>(std::move(c)));
+                int c = entry.value("count", 1);
+                if (c < 1) c = 1;
+                total_cards += static_cast<size_t>(c);
             }
         }
-        else if (j.is_object())
+        deck.reserve(total_cards);
+
+        // Parse each entry and expand by count
+        for (size_t i = 0; i < j.size(); ++i)
         {
-            Card c = j.get<Card>();
-            deck.push_back(std::make_shared<Card>(std::move(c)));
-        }
-        else
-        {
-            std::cerr << "Top-level JSON is not an array or object.\n";
-        }
+            const auto& item = j[i];
 
-        return deck;
-    }
-    catch (const json::parse_error &)
-    {
-        // If parsing whole file fails, fall back to JSONL (one object per line).
-    }
-
-    library.close();
-    library.open(path);
-    if (!library.is_open())
-    {
-        std::cerr << "Error reopening file: " << path << "\n";
-        return deck;
-    }
-
-    std::string line;
-    size_t line_no = 0;
-    while (std::getline(library, line))
-    {
-        ++line_no;
-        if (line.empty())
-            continue;
-
-        try
-        {
-            json jline = json::parse(line);
-            if (!jline.is_object())
+            if (!item.is_object())
             {
-                std::cerr << "Line " << line_no << " is not a JSON object; skipping.\n";
+                std::cerr << "Entry " << i << " is not an object; skipping.\n";
                 continue;
             }
 
-            Card c = jline.get<Card>();
-            deck.push_back(std::make_shared<Card>(std::move(c)));
-        }
-        catch (const json::parse_error &e)
-        {
-            std::cerr << "JSON parse error on line " << line_no << ": " << e.what() << "\n";
-        }
-        catch (const json::type_error &e)
-        {
-            std::cerr << "JSON type error on line " << line_no << ": " << e.what() << "\n";
-        }
-    }
+            try
+            {
+                DeckEntry e = item.get<DeckEntry>();
 
-    return deck;
+                if (e.count < 1)
+                {
+                    std::cerr << "Entry " << i << " has invalid count (" << e.count
+                              << "); treating as 1.\n";
+                    e.count = 1;
+                }
+
+                // Optional sanity check: if name/id missing, warn
+                if (e.card.name.empty() || e.card.id.empty())
+                {
+                    std::cerr << "Warning: Entry " << i
+                              << " parsed a card with missing name/id (name=\""
+                              << e.card.name << "\", id=\"" << e.card.id << "\").\n";
+                }
+
+                for (int n = 0; n < e.count; ++n)
+                {
+                    deck.push_back(std::make_shared<Card>(e.card)); // copy base card
+                }
+            }
+            catch (const json::out_of_range& ex)
+            {
+                // e.g. missing "card" because you used j.at("card") in from_json
+                std::cerr << "Entry " << i << " missing required field: " << ex.what()
+                          << " ; skipping.\n";
+            }
+            catch (const json::type_error& ex)
+            {
+                std::cerr << "Entry " << i << " has wrong type: " << ex.what()
+                          << " ; skipping.\n";
+            }
+        }
+
+        return deck;
+    }
+    catch (const json::parse_error& e)
+    {
+        std::cerr << "JSON parse error in " << path << ": " << e.what() << "\n";
+        return deck;
+    }
+    catch (const json::exception& e)
+    {
+        // Any other nlohmann::json exception
+        std::cerr << "JSON error in " << path << ": " << e.what() << "\n";
+        return deck;
+    }
 }

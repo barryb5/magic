@@ -17,7 +17,10 @@ public:
     std::vector<std::shared_ptr<Card>> hand{};
 
     Player(Card commander, std::vector<std::shared_ptr<Card>> deck) : commander(std::move(commander)), deck(std::move(deck)) {}
+    Player(std::string commander, std::vector<std::shared_ptr<Card>> deck);
 
+    void printCards() const;
+    void printHand() const;
     void shuffle();
     void start();
     void draw();
