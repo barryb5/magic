@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <iterator>
 #include <iostream>
+#include <memory>
 
 Player::Player(std::string commander_name, std::vector<std::shared_ptr<Card>> deck)
     : deck(std::move(deck))
@@ -17,21 +18,21 @@ Player::Player(std::string commander_name, std::vector<std::shared_ptr<Card>> de
 
     if (it != this->deck.end())
     {
-        commander = **it;
+        commander = *it;
         // Remove commander from deck
         this->deck.erase(it);
     }
     else
     {
         std::cerr << "Commander card '" << commander_name << "' not found in deck. Using default Card.\n";
-        commander = Card();
+        exit(1);
     }
 }
 
 void Player::printCards() const
 {
     std::cout << "Player's Cards:\n";
-    std::cout << "Commander: " << commander.name << "\n";
+    std::cout << "Commander: " << commander->name << "\n";
     std::cout << "Deck (" << deck.size() << " cards):\n";
     for (const auto& card_ptr : deck)
     {

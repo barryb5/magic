@@ -36,16 +36,16 @@ void BoardState::printBoardState() const
     }
 }
 
-void BoardState::playPermanent(const std::shared_ptr<Card>& card)
+bool BoardState::addPermanentToBattlefield(const std::shared_ptr<Card>& card)
 {
     if (!card)
     {
         std::cerr << "Cannot play a null card.\n";
-        return;
+        return false;
     }
 
-    // Determine the type of the card and add it to the appropriate zone
-    if (card->type_line.find("Land") != card->type_line.end())
+
+    if (card->type_line.find(CardType::LAND) != card->type_line.end())
     {
         lands.push_back(card);
     }
@@ -53,25 +53,38 @@ void BoardState::playPermanent(const std::shared_ptr<Card>& card)
     {
         creatures.push_back(card);
     }
-    else if (card->type_line.find("Enchantment") != card->type_line.end())
+    else if (card->type_line.find(CardType::ENCHANTMENT) != card->type_line.end())
     {
         enchantments.push_back(card);
     }
-    else if (card->type_line.find("Artifact") != card->type_line.end())
+    else if (card->type_line.find(CardType::ARTIFACT) != card->type_line.end())
     {
         artifacts.push_back(card);
     }
     else
     {
         std::cerr << "Card '" << card->name << "' is not a permanent type.\n";
-        return;
+        return false;
     }
 
-    // Remove the card from player's hand
+    return true;
+}
+
+
+void BoardState::playPermanent(const std::shared_ptr<Card>& card)
+{
+    if (!addPermanentToBattlefield(card))
+        return;
+
+    // Remove from hand
     auto it = std::find(player.hand.begin(), player.hand.end(), card);
     if (it != player.hand.end())
     {
         player.hand.erase(it);
+    }
+    else if (player.commander_in_command_zone && *card == *(player.commander))
+    {
+        player.commander_in_command_zone = false;
     }
     else
     {
@@ -81,15 +94,31 @@ void BoardState::playPermanent(const std::shared_ptr<Card>& card)
 
 void BoardState::playPermanent(const std::string& card_name)
 {
-    auto it = std::find_if(player.hand.begin(), player.hand.end(),
-                           [&card_name](const std::shared_ptr<Card>& cptr)
-                           { return cptr && cptr->name == card_name; });
+    // Independently: this overload does not call the shared_ptr overload.
+    auto it = std::find_if(
+        player.hand.begin(), player.hand.end(),
+        [&card_name](const std::shared_ptr<Card>& cptr)
+        {
+            return cptr && cptr->name == card_name;
+        });
 
     if (it == player.hand.end())
     {
+        if (player.commander_in_command_zone && card_name == player.commander->name)
+        {
+            player.commander_in_command_zone = false;
+            addPermanentToBattlefield(player.commander);
+            return;
+        }
         std::cerr << "Card '" << card_name << "' not found in hand.\n";
         return;
     }
 
-    playPermanent(*it);
+    // Use the found instance directly and erase by iterator (no second search).
+    const std::shared_ptr<Card> card = *it;
+
+    if (!addPermanentToBattlefield(card))
+        return;
+
+    player.hand.erase(it);
 }

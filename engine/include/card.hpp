@@ -19,6 +19,14 @@ enum CardType
     LAND
 };
 
+enum class Color : char {
+    RED = 'R',
+    WHITE = 'W',
+    BLUE = 'U',
+    GREEN = 'G',
+    BLACK = 'B'
+};
+
 static inline bool contains_wordish(const std::string &s, const std::string &needle)
 {
     return s.find(needle) != std::string::npos;

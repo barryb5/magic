@@ -7,7 +7,7 @@
 class Player
 {
 public:
-    Card commander;
+    std::shared_ptr<Card> commander;
     bool commander_in_command_zone = true;
     int health = 40;
     std::vector<std::shared_ptr<Card>> deck;
@@ -16,7 +16,9 @@ public:
     std::vector<std::shared_ptr<Card>> exile{};
     std::vector<std::shared_ptr<Card>> hand{};
 
-    Player(Card commander, std::vector<std::shared_ptr<Card>> deck) : commander(std::move(commander)), deck(std::move(deck)) {}
+    Player() = delete;
+    Player(std::shared_ptr<Card> commander, std::vector<std::shared_ptr<Card>> deck) : commander(std::move(commander)), deck(std::move(deck)) {}
+    Player(Card commander, std::vector<std::shared_ptr<Card>> deck) : commander(std::make_shared<Card>(commander)), deck(std::move(deck)) {}
     Player(std::string commander, std::vector<std::shared_ptr<Card>> deck);
 
     void printCards() const;
