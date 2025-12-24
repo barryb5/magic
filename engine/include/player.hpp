@@ -23,6 +23,7 @@ public:
 
     void printCards() const;
     void printHand() const;
+    std::string printHandForLLM() const;
     void shuffle();
     void start();
     void draw();

@@ -8,7 +8,53 @@
 
 void Card::printNameAndOracle() const
 {
-    std::cout << "- " << name << " - " << oracle_text << "\n";
+    std::cout << name << " - " << oracle_text << "\n";
+}
+
+std::string Card::printForLLM() const
+{
+    std::string result = name + "|";
+
+    for (const auto& type : type_line)
+    {
+        result += card_type_to_string(type) + ",";
+    }
+    result.pop_back();
+
+    if (!oracle_text.empty())
+        result += "|" + oracle_text;
+    
+    if (!mana_cost.empty())
+        result += "|" + mana_cost;
+        
+    result += "|";
+
+    for (const auto& kw : keywords)
+    {
+        result += kw + ",";
+    }
+    
+    result.pop_back();
+
+    if (tapped)
+    {
+        result += "|tapped";
+    }
+    else
+    {
+        result += "|untapped";
+    }
+
+    if (isCreature())
+    {
+        if (power.has_value() && toughness.has_value())
+        {
+            result += "|" + std::to_string(*power) + "|" + std::to_string(*toughness);
+        }
+        result += summoning_sick ? "|summoning_sick" : "|not_summoning_sick";
+    }
+
+    return result;
 }
 
 bool Card::isCreature() const

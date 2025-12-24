@@ -36,6 +36,63 @@ void BoardState::printBoardState() const
     }
 }
 
+
+std::string BoardState::printBoardStateForLLM()
+{
+    std::string result;
+
+    result += "Health: " + std::to_string(player.health) + "\n";
+    result += "Turn: " + std::to_string(turn_number) + "\n";
+    result += "Experience: " + std::to_string(experience_counters) + "\n";
+
+    result += "----\n";
+
+    result += "Lands " + std::to_string(lands.size()) + ":\n";
+    for (const auto& land_ptr : lands)
+    {
+        if (land_ptr)
+        {
+            result += land_ptr->printForLLM() + "\n";
+            result += "----\n";
+        }
+    }
+
+    result += "Creatures " + std::to_string(creatures.size()) + ":\n";
+    for (const auto& creature_ptr : creatures)
+    {
+        if (creature_ptr)
+        {
+            result += creature_ptr->printForLLM() + "\n";
+            result += "----\n";
+        }
+    }
+
+    result += "Enchantments " + std::to_string(enchantments.size()) + ":\n";
+    for (const auto& enchantment_ptr : enchantments)
+    {
+        if (enchantment_ptr)
+        {
+            result += enchantment_ptr->printForLLM() + "\n";
+            result += "----\n";
+        }
+    }
+
+    result += "Artifacts " + std::to_string(artifacts.size()) + ":\n";
+    for (const auto& artifact_ptr : artifacts)
+    {
+        if (artifact_ptr)
+        {
+            result += artifact_ptr->printForLLM() + "\n";
+            result += "----\n";
+        }
+    }
+
+    result += "---\nHand\n";
+    result += player.printHandForLLM();
+
+    return result;
+}
+
 bool BoardState::addPermanentToBattlefield(const std::shared_ptr<Card>& card)
 {
     if (!card)
@@ -121,4 +178,47 @@ void BoardState::playPermanent(const std::string& card_name)
         return;
 
     player.hand.erase(it);
+}
+
+void BoardState::nextTurn()
+{
+    // Update Turn Number
+    ++turn_number;
+
+    // Untap all permanents
+    for (const auto& land_ptr : lands)
+    {
+        if (land_ptr)
+        {
+            land_ptr->tapped = false;
+        }
+    }
+
+    for (const auto& creature_ptr : creatures)
+    {
+        if (creature_ptr)
+        {
+            creature_ptr->summoning_sick = false;
+            creature_ptr->tapped = false;
+        }
+    }
+
+    for (const auto& enchantment_ptr : enchantments)
+    {
+        if (enchantment_ptr)
+        {
+            enchantment_ptr->tapped = false;
+        }
+    }
+
+    for (const auto& artifact_ptr : artifacts)
+    {
+        if (artifact_ptr)
+        {
+            artifact_ptr->tapped = false;
+        }
+    }
+
+    // Draw Card
+    player.draw();
 }

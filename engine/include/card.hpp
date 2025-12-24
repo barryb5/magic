@@ -24,7 +24,9 @@ enum class Color : char {
     WHITE = 'W',
     BLUE = 'U',
     GREEN = 'G',
-    BLACK = 'B'
+    BLACK = 'B',
+    COLORLESS = 'C',
+    ANYCOLOR = 'A'
 };
 
 static inline bool contains_wordish(const std::string &s, const std::string &needle)
@@ -54,6 +56,21 @@ static std::set<CardType> parse_type_line(const std::string &type_line)
     return types;
 }
 
+inline std::string card_type_to_string(CardType type)
+{
+    switch (type)
+    {
+    case CREATURE:     return "Creature";
+    case SORCERY:      return "Sorcery";
+    case INSTANT:      return "Instant";
+    case ENCHANTMENT:  return "Enchantment";
+    case ARTIFACT:     return "Artifact";
+    case PLANESWALKER: return "Planeswalker";
+    case LAND:         return "Land";
+    default:           return "Unknown";
+    }
+}
+
 static std::optional<int> get_optional_int(const json& j, const char* key) {
     auto it = j.find(key);
     if (it == j.end() || it->is_null()) return std::nullopt;
@@ -72,6 +89,8 @@ public:
     std::optional<int> toughness;
     std::vector<std::string> keywords;
     std::vector<std::string> all_parts;
+    bool tapped = false;
+    bool summoning_sick = true;
 
     Card(std::string name, std::string id, std::string mana_cost,
          std::set<CardType> type_line, std::string oracle_text,
@@ -88,6 +107,7 @@ public:
     bool isCreature() const;
     int getRawCost() const;
     void printNameAndOracle() const;
+    std::string printForLLM() const;
 };
 
 inline void from_json(const json &j, Card &c)

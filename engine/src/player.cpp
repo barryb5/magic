@@ -44,11 +44,30 @@ void Player::printCards() const
 void Player::printHand() const
 {
     std::cout << "Player's Hand (" << hand.size() << " cards):\n";
+    int count = 0;
     for (const auto& card_ptr : hand)
     {
         if (card_ptr)
-            card_ptr->printNameAndOracle();
+        {
+            std::cout << count++ << " -";
+            card_ptr->printNameAndOracle();            
+        }
     }
+}
+
+std::string Player::printHandForLLM() const
+{
+    std::string result = std::to_string(hand.size()) + "\n";
+    result += "----\n";
+    for (const auto& card_ptr : hand)
+    {
+        if (card_ptr)
+        {
+            result += card_ptr->printForLLM() + "\n";
+            result += "----\n";
+        }
+    }
+    return result;
 }
 
 void Player::shuffle()
