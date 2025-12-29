@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.11)
 project (engine)
 
 # Set Configuration specific DEFINES
+SET(CMAKE_CXX_FLAGS "-Wall")
+
 IF ( CMAKE_BUILD_TYPE STREQUAL "Debug" )
   message(STATUS "Debug build")
   add_definitions ( "-DUSE_PERFORMANCE_DATA")
@@ -16,13 +18,11 @@ IF ( CMAKE_BUILD_TYPE STREQUAL "Debug" )
       -DDEBUG
       -D_DEBUG
       -Og
-      -g3
   )
 ELSE()
-  add_definitions ( "-Wall ")
   add_definitions ( "-DNDEBUG " )
   add_definitions ( "-DUSE_PERFORMANCE_DATA")
-  add_definitions ( "-O1 ")
+  add_definitions ( "-O2 ")
   add_definitions ( "-march=native ")
   add_definitions ( "-mtune=native ")
   add_definitions ( "-Wno-deprecated ")
@@ -62,7 +62,7 @@ target_include_directories(engine PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-target_link_libraries(engine PRIVATE 
+target_link_libraries(engine PRIVATE
   nlohmann_json::nlohmann_json
   pybind11::embed
   Python::Python

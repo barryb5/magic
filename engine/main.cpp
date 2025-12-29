@@ -39,7 +39,7 @@ int main(int argc, char** argv)
     // std::shared_ptr<Card> card_to_play = player.hand[card_num];
 
     // board.playPermanent(card_to_play);
-    
+
     // board.player.printHand();
 
     // board.printBoardState();
@@ -47,9 +47,9 @@ int main(int argc, char** argv)
     py::scoped_interpreter guard{};  // MUST come first
 
     auto gem = GeminiClientWrapper::CreateFromModule(
-        MAGIC_API_DIR,   // from CMake
-        "requester",     // requester.py  -> import requester
-        "GeminiApi",  // class inside requester.py
+        MAGIC_API_DIR, // from CMake
+        "requester",   // requester.py  -> import requester
+        "GeminiApi",   // class inside requester.py
         "gemini-2.5-flash"
     );
 
