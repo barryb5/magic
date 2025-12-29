@@ -32,6 +32,8 @@ ENDIF()
 
 include(FetchContent)
 
+find_package(Python COMPONENTS Interpreter Development REQUIRED)
+find_package(pybind11 CONFIG REQUIRED)
 
 find_package(nlohmann_json 3.12.0 CONFIG QUIET)
 
@@ -56,4 +58,21 @@ add_executable(engine
     ${SOURCE_FILES}
 )
 
-target_link_libraries(engine PRIVATE nlohmann_json::nlohmann_json)
+target_include_directories(engine PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+target_link_libraries(engine PRIVATE 
+  nlohmann_json::nlohmann_json
+  pybind11::embed
+  Python::Python
+)
+
+get_filename_component(MAGIC_API_DIR
+  "${CMAKE_CURRENT_SOURCE_DIR}/../api"
+  ABSOLUTE
+)
+
+target_compile_definitions(engine PRIVATE
+  MAGIC_API_DIR="${MAGIC_API_DIR}"
+)

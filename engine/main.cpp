@@ -7,6 +7,7 @@
 #include <memory>
 #include "include/player.hpp"
 #include "include/boardstate.hpp"
+#include "include/geminiapi.hpp"
 
 int main(int argc, char** argv)
 {
@@ -43,6 +44,17 @@ int main(int argc, char** argv)
 
     // board.printBoardState();
 
+    py::scoped_interpreter guard{};  // MUST come first
+
+    auto gem = GeminiClientWrapper::CreateFromModule(
+        MAGIC_API_DIR,   // from CMake
+        "requester",     // requester.py  -> import requester
+        "GeminiApi",  // class inside requester.py
+        "gemini-2.5-flash"
+    );
+
+    std::cout << "Response:" << std::endl;
+    std::cout << gem.generate_text(board.printBoardStateForLLM()) << "\n";
 
     return 0;
 }
