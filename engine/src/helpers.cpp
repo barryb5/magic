@@ -8,6 +8,90 @@
 #include <vector>
 #include "../include/card.hpp"
 
+void from_json(const nlohmann::json &j, Response &r, std::vector<std::shared_ptr<Card>> &card_library)
+{
+    r.cards_played.clear();
+    if (j.contains("Cards Played") && j["Cards Played"].is_array())
+    {
+        for (const auto &card_j : j["Cards Played"])
+        {
+            if (!card_j.is_string())
+                continue;
+            std::string card_str = card_j.get<std::string>();
+
+            std::string card_name = getCardName(card_str);
+            auto it = std::find_if(card_library.begin(), card_library.end(),
+                                    [&card_name](const std::shared_ptr<Card> &c)
+                                    { return c->name == card_name; });
+            if (it != card_library.end())
+            {
+                r.cards_played.push_back(*it);
+            }
+        }
+    }
+
+    r.cards_removed.clear();
+    if (j.contains("Cards Removed") && j["Cards Removed"].is_array())
+    {
+        for (const auto &card_j : j["Cards Removed"])
+        {
+            if (!card_j.is_string())
+                continue;
+
+            std::string card_str = card_j.get<std::string>();
+
+            std::string card_name = getCardName(card_str);
+            auto it = std::find_if(card_library.begin(), card_library.end(),
+                                    [&card_name](const std::shared_ptr<Card> &c)
+                                    { return c->name == card_name; });
+            if (it != card_library.end())
+            {
+                r.cards_removed.push_back(*it);
+            }
+        }
+    }
+
+    if (j.contains("Stats") && j["Stats"].is_object())
+    {
+        const auto &stats_json = j["Stats"];
+        r.stats.health_change = stats_json.value("Health Change", 0);
+        r.stats.cards_drawn = stats_json.value("Cards Drawn", 0);
+        r.stats.experience_counters = stats_json.value("Experience Counters", 0);
+    }
+
+    r.mana_pool.clear();
+    if (j.contains("Mana Pool") && j["Mana Pool"].is_array())
+    {
+        for (const auto &mana : j["Mana Pool"])
+        {
+            if (!obj.is_object())
+                continue;
+            for (auto it = obj.begin(); it != obj.end(); ++it)
+            {
+                if (it.value().is_number_integer())
+                    r.mana_pool[it.key()] = it.value().get<int>();
+            }
+        }
+    }
+
+    r.mana_available.clear();
+    if (j.contains("Mana Available") && j["Mana Available"].is_array())
+    {
+        for (const auto &mana : j["Mana Available"])
+        {
+            if (!mana.is_object())
+                continue;
+            for (auto it = mana.begin(); it != mana.end(); ++it)
+            {
+                if (it.value().is_number_integer())
+                {
+                    r.mana_available[it.key()] = it.value().get<int>();
+                }
+            }
+        }
+    }
+}
+
 std::string trim(std::string s)
 {
     auto notSpace = [](unsigned char c)
@@ -15,6 +99,16 @@ std::string trim(std::string s)
     s.erase(s.begin(), std::find_if(s.begin(), s.end(), notSpace));
     s.erase(std::find_if(s.rbegin(), s.rend(), notSpace).base(), s.end());
     return s;
+}
+
+std::string getCardName(std::string card_str)
+{
+    size_t id_pos = card_str.find('|');
+    if (id_pos != std::string::npos)
+    {
+        return trim(card_str.substr(0, id_pos));
+    }
+    return trim(card_str);
 }
 
 int tokenValue(std::string tok)
